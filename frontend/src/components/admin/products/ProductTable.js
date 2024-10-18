@@ -13,13 +13,12 @@ const AllProduct = (props) => {
 
   useEffect(() => {
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchData = async () => {
     setLoading(true);
     let responseData = await getAllProduct();
-    setTimeout(() => {
+    
       if (responseData && responseData.Products) {
         dispatch({
           type: "fetchProductsAndChangeState",
@@ -27,7 +26,6 @@ const AllProduct = (props) => {
         });
         setLoading(false);
       }
-    }, 1000);
   };
 
   const deleteProductReq = async (pId) => {
@@ -178,7 +176,7 @@ const ProductTable = ({ product, deleteProduct, editProduct }) => {
               />
             </svg>
           </span>
-          {/* <span
+          <span
             onClick={(e) => deleteProduct(product._id)}
             className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 mx-1"
           >
@@ -194,7 +192,7 @@ const ProductTable = ({ product, deleteProduct, editProduct }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </span> */}
+          </span>
         </td>
       </tr>
     </Fragment>

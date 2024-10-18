@@ -185,6 +185,19 @@ const CategoryTable = ({ category, deleteCat, editCat }) => {
               />
             </svg>
           </span>
+          <span
+            onClick={() => deleteCat(category._id)}
+            className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 mx-1"
+          >
+            <svg
+              className="w-6 h-6 fill-current text-red-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10 10.586L5.293 5.879 4.879 6.293 9.586 11 4.879 15.707l.414.414L10 11.414l5.707 5.707.414-.414L10 10.586z" />
+            </svg>
+          </span>
         </td>
       </tr>
     </Fragment>

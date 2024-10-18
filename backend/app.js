@@ -15,6 +15,7 @@ const orderRouter = require("./routes/orders.route.js");
 const paymentRouter = require("./routes/payment.route.js");
 const usersRouter = require("./routes/users.route.js");
 const customizeRouter = require("./routes/customize.route.js");
+const comboRouter = require("./routes/combos.route.js");
 // Import Auth middleware for check user login or not~
 const { loginCheck } = require("./middleware/auth.middleware");
 const CreateAllFolder = require("./config/uploadFolderCreateScript");
@@ -53,6 +54,7 @@ app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/payment", paymentRouter);
 app.use("/api/customize", customizeRouter);
+app.use("/api/combo", comboRouter);
 
 // Run Server
 const PORT = process.env.PORT || 8000;

@@ -13,6 +13,8 @@ import ProductByCategory from "./productInCategary/ProductByCategory";
 import CheckoutPage from "./order/CheckoutPage";
 import ContactUs from "./contactUs";
 import custom from "./custom";
+import Combo from "./combo";
+import ComboDetails from "./comboDetails";
 
 export {
   Home,
@@ -31,5 +33,7 @@ export {
   ProductByCategory,
   CheckoutPage,
   ContactUs,
-  custom
+  custom,
+  Combo,
+  ComboDetails
 };
