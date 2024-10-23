@@ -80,3 +80,13 @@ export const deleteCombo = async (comboId) => {
         throw error;
     }
 };
+
+export const getPaymentLink = async (orderData) => {
+    try {
+        const res = await axios.post(`${apiURL}/api/payment/checkout-url`, orderData);
+        return res.data.url; // This is the checkout URL returned by the backend
+    } catch (error) {
+        console.error("Error generating payment link:", error);
+        throw error; // Rethrow to handle in the frontend
+    }
+};
